@@ -29,11 +29,10 @@ const TabRout = () => {
         component={DrawerRoute}
         options={{
           unmountOnBlur: true,
-          title: "Próximo Treino",
+          title: "Treinos",
         }}
       />
 
-      <Tab.Screen name="Principal" component={Principal} />
       <Tab.Screen name="Dieta" component={Dieta} />
     </Tab.Navigator>
   );

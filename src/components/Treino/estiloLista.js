@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-const estiloInicial = StyleSheet.create({
+const estiloLista = StyleSheet.create({
   treinoContainer: {
     height: 60,
     width: 60,
@@ -15,7 +15,8 @@ const estiloInicial = StyleSheet.create({
     fontWeight: "bold",
     marginTop: 10,
     marginLeft: 10,
+    marginRight: 120,
   },
 });
 
-export default estiloInicial;
+export default estiloLista;

@@ -11,7 +11,7 @@ const DrawerRoute = () => {
   return (
     <Drawer.Navigator initialRouteName="Treino">
       <Drawer.Screen name="Treino" component={Inicial} />
-      <Drawer.Screen name="Principal" component={Principal} />
+      <Drawer.Screen name="Perfil" component={Principal} />
       <Drawer.Screen name="Dieta" component={Dieta} />
     </Drawer.Navigator>
   );
