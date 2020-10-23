@@ -13,4 +13,13 @@ const images = {
   },
 };
 
-export { images };
+const videos = {
+  treino1: {
+    uri: require("../../../assets/videos/puxadapolia.mp4"),
+  },
+  treino2: {
+    uri: null,
+  },
+};
+
+export { images, videos };

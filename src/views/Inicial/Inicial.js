@@ -21,6 +21,7 @@ function Inicial({ navigation }) {
       <View style={{ marginTop: "5%" }}>
         <FlatList
           showsHorizontalScrollIndicator={false}
+          showsVerticalScrollIndicator={false}
           keyExtractor={(item) => item.Letra}
           data={objTreinos}
           renderItem={({ item }) => <ListaTreinos data={item} />}

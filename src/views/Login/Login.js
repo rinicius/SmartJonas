@@ -16,6 +16,7 @@ function Login({ navigation }) {
       <ImageBackground
         source={require("../../../assets/bgcut.jpg")}
         style={estiloLogin.fundo}
+        transition={false}
       >
         <Text style={estiloLogin.title}>JUNTE-SE</Text>
         <Text style={estiloLogin.text}>

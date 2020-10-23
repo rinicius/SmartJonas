@@ -30,7 +30,7 @@ const estiloLoginpp = StyleSheet.create({
     marginLeft: 40,
     marginRight: 40,
     marginTop: 12,
-    borderRadius: 100,
+    borderRadius: 5,
     height: 50,
     width: 300,
     paddingLeft: 10,

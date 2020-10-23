@@ -49,6 +49,7 @@ function LoginPP({ navigation }) {
       <ImageBackground
         source={require("../../../assets/bgcut.jpg")}
         style={estiloLoginpp.fundo}
+        transition={false}
       >
         <View style={{ paddingLeft: 20 }}>
           <TouchableOpacity

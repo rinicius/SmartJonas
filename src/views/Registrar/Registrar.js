@@ -29,6 +29,7 @@ function Registrar({ navigation }) {
       <ImageBackground
         source={require("../../../assets/bgcut.jpg")}
         style={estiloRegistrar.fundo}
+        transition={false}
       >
         <View style={{ paddingLeft: 20 }}>
           <TouchableOpacity

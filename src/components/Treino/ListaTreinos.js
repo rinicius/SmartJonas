@@ -14,42 +14,49 @@ export function ListaTreinos({ data }) {
       series: "3",
       repeticoes: "de 10 a 12",
       imagem: "treino1",
+      video: "treino1",
     },
     {
       titulo: "sla treino 2",
       series: "3",
       repeticoes: "de 10 a 12",
       imagem: "treino2",
+      video: "treino1",
     },
     {
       titulo: "sla treino 3",
       series: "3",
       repeticoes: "de 10 a 12",
       imagem: "treino3",
+      video: "treino1",
     },
     {
       titulo: "sla treino 4",
       series: "3",
       repeticoes: "de 10 a 12",
       imagem: "treino4",
+      video: "treino1",
     },
     {
       titulo: "sla treino 5",
       series: "3",
       repeticoes: "de 10 a 12",
       imagem: "treino4",
+      video: "treino1",
     },
     {
       titulo: "sla treino 6",
       series: "3",
       repeticoes: "de 10 a 12",
       imagem: "treino4",
+      video: "treino1",
     },
     {
       titulo: "sla treino 7",
       series: "3",
       repeticoes: "de 10 a 12",
       imagem: "treino4",
+      video: "treino1",
     },
   ]);
   const abrirTreino = () => {
@@ -69,7 +76,7 @@ export function ListaTreinos({ data }) {
   return (
     <View style={{ alignItems: "center", justifyContent: "center", flex: 1 }}>
       <TouchableOpacity activeOpacity={0.5} onPress={abrirTreino}>
-        <View style={{ borderWidth: 2, borderRadius: 100, marginBottom: 10 }}>
+        <View style={{ borderWidth: 3, borderRadius: 50, marginBottom: 10 }}>
           <View style={{ flexDirection: "row", padding: 8, minWidth: 330 }}>
             <View style={estiloLista.treinoContainer}>
               <Text
@@ -110,6 +117,7 @@ export function ListaTreinos({ data }) {
       {isOpen && (
         <FlatList
           showsHorizontalScrollIndicator={false}
+          showsVerticalScrollIndicator={false}
           keyExtractor={(item) => item.titulo}
           data={objTreinos}
           renderItem={({ item }) => <ContainerTreino data={item} />}
