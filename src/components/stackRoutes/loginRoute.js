@@ -29,7 +29,7 @@ function LogoTitle() {
 
 const loginRoute = () => {
   return (
-    <Stack.Navigator initialRouteName="Inicial">
+    <Stack.Navigator initialRouteName="Login">
       <Stack.Screen
         name="Login"
         component={Login}
