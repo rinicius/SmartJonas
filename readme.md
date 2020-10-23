@@ -1,4 +1,4 @@
-###Como usar:
+### Como usar:
 
 - No console, digite `npm install expo-cli --global ` para instalar o Expo
 
