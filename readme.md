@@ -4,4 +4,4 @@
 
 - Dentro da pasta do projeto, utilize o comando `expo install` para instalar as dependências
 
-- Após a instalação terminar, utilize `expo start` para a iniciar
+- Após a instalação terminar, utilize `expo start` para iniciar
