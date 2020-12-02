@@ -8,11 +8,15 @@ function Inicial({ navigation }) {
   const [objTreinos, setTreinos] = useState([
     {
       letra: "A",
-      partes: "Peitoral, Tríceps, Funcionais",
+      partes: "Braço e Perna",
     },
     {
       letra: "B",
-      partes: "csgo, lol e val",
+      partes: "Braços e ABS",
+    },
+    {
+      letra: "C",
+      partes: "Pernas, Peitoral e ABS",
     },
   ]);
 
@@ -22,9 +26,11 @@ function Inicial({ navigation }) {
         <FlatList
           showsHorizontalScrollIndicator={false}
           showsVerticalScrollIndicator={false}
-          keyExtractor={(item) => item.Letra}
           data={objTreinos}
-          renderItem={({ item }) => <ListaTreinos data={item} />}
+          keyExtractor={(item) => item.letra}
+          renderItem={({ item }) => (
+            <ListaTreinos data={item} treinoLetra={item.letra} />
+          )}
         />
       </View>
     </View>

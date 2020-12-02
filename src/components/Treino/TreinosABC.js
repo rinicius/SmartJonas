@@ -35,10 +35,6 @@ export function ContainerTreino({ data }) {
 
             <Video
               source={videos[treino.video].uri}
-              // source={{
-              //   uri:
-              //     "https://srv-file16.gofile.io/download/ghmjrH/PUXADA%20SUPINADA%20NA%20POLIA%20ALTA%20_%20EXERC%C3%8DCIO%20PARA%20COSTAS%20_%20PUXADA%20NA%20POLIA%20_%20JFIT%20PERSONAL%20TRAINER.mp4",
-              // }}
               transition={false}
               rate={1.0}
               volume={1.0}
@@ -54,12 +50,6 @@ export function ContainerTreino({ data }) {
                 backgroundColor: "#e7e7e7",
               }}
             />
-            {/* 
-            <Image
-              style={{ height: 300, width: 300, marginBottom: 20 }}
-              resizeMode="contain"
-              source={images[treino.imagem].uri}
-            /> */}
 
             <TouchableOpacity
               style={{ ...estiloTreino.openButton, backgroundColor: "#000000" }}

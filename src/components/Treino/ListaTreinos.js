@@ -1,64 +1,101 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Text, View, TouchableOpacity, Animated, FlatList } from "react-native";
 import { ContainerTreino } from "./TreinosABC";
 import { AntDesign } from "@expo/vector-icons";
 import estiloLista from "./estiloLista";
 
-export function ListaTreinos({ data }) {
+export function ListaTreinos({ data, treinoLetra }) {
+  const [letra, setLetra] = useState(treinoLetra);
   const [isOpen, setOpen] = useState(false);
   const [rotacao, setRotacao] = useState(new Animated.Value(0));
   const [treino, setTreino] = useState(data);
-  const [objTreinos, setTreinos] = useState([
+  const [Iniciante, setTreinos] = useState([
     {
-      titulo: "Puxada polia barra supinada",
+      titulo: "Treino de braços iniciante",
       series: "3",
       repeticoes: "de 10 a 12",
       imagem: "treino1",
-      video: "treino1",
+      video: "treino21",
     },
     {
-      titulo: "sla treino 2",
+      titulo: "Treino de pernas iniciante",
       series: "3",
       repeticoes: "de 10 a 12",
       imagem: "treino2",
-      video: "treino1",
+      video: "treino12",
     },
     {
-      titulo: "sla treino 3",
+      titulo: "Puxada Polia",
+      series: "3",
+      repeticoes: "de 10 a 12",
+      imagem: "treino2",
+      video: "treino11",
+    },
+  ]);
+  const [Intermediario, setIntermediario] = useState([
+    {
+      titulo: "Treino ABS Intermediário",
+      series: "3",
+      repeticoes: "de 10 a 12",
+      imagem: "treino1",
+      video: "treino22",
+    },
+    {
+      titulo: "Treino Braço Intermediário",
+      series: "3",
+      repeticoes: "de 10 a 12",
+      imagem: "treino2",
+      video: "treino31",
+    },
+    {
+      titulo: "Treino Perna Intermediário",
       series: "3",
       repeticoes: "de 10 a 12",
       imagem: "treino3",
-      video: "treino1",
-    },
-    {
-      titulo: "sla treino 4",
-      series: "3",
-      repeticoes: "de 10 a 12",
-      imagem: "treino4",
-      video: "treino1",
-    },
-    {
-      titulo: "sla treino 5",
-      series: "3",
-      repeticoes: "de 10 a 12",
-      imagem: "treino4",
-      video: "treino1",
-    },
-    {
-      titulo: "sla treino 6",
-      series: "3",
-      repeticoes: "de 10 a 12",
-      imagem: "treino4",
-      video: "treino1",
-    },
-    {
-      titulo: "sla treino 7",
-      series: "3",
-      repeticoes: "de 10 a 12",
-      imagem: "treino4",
-      video: "treino1",
+      video: "treino32",
     },
   ]);
+  const [Avancado, setAvancado] = useState([
+    {
+      titulo: "Treino ABS Avançado",
+      series: "3",
+      repeticoes: "de 10 a 12",
+      imagem: "treino1",
+      video: "treino41",
+    },
+    {
+      titulo: "Treino ABS Avançado 2",
+      series: "3",
+      repeticoes: "de 10 a 12",
+      imagem: "treino2",
+      video: "treino42",
+    },
+    {
+      titulo: "Treino Perna Avançado",
+      series: "3",
+      repeticoes: "de 10 a 12",
+      imagem: "treino3",
+      video: "treino43",
+    },
+    {
+      titulo: "Treino Parte Superior Avançado",
+      series: "3",
+      repeticoes: "de 10 a 12",
+      imagem: "treino4",
+      video: "treino44",
+    },
+  ]);
+
+  const [treinoSelecionado, setTreinoSelecionado] = useState(() => {
+    if (letra === "A") {
+      return Iniciante;
+    } else if (letra === "B") {
+      return Intermediario;
+    } else if (letra === "C") {
+      return Avancado;
+    }
+  });
+
   const abrirTreino = () => {
     setOpen(!isOpen);
 
@@ -119,7 +156,7 @@ export function ListaTreinos({ data }) {
           showsHorizontalScrollIndicator={false}
           showsVerticalScrollIndicator={false}
           keyExtractor={(item) => item.titulo}
-          data={objTreinos}
+          data={treinoSelecionado}
           renderItem={({ item }) => <ContainerTreino data={item} />}
         />
       )}
